@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadi Buti Collection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+        }
+
+        header {
+            text-align: center;
+            background: #4CAF50;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 0 10px;
+        }
+
+        .card-description {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jadi Buti Collection</h1>
+        <p>Click on a herb to place an order</p>
+    </header>
+
+    <div class="container" id="jadiButiContainer">
+        <!-- Cards will be dynamically added here -->
+    </div>
+
+    <script>
+        // Herb Data
+        const jadiButis = [
+            {
+                name: "Ashwagandha",
+                description: "Known for reducing stress and improving energy levels.",
+                image: "https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/bp-wellness-centrum/en_US/Articles/Menopause/ashwagandha/hero-image-2x.png?auto=format"
+            },
+            {
+                name: "Tulsi (Holy Basil)",
+                description: "A powerful herb for immunity and respiratory health.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuo9pRmkmOcAydOEFWPJEL5xqiqLeESZGKgw&s"
+            },
+            {
+                name: "Neem",
+                description: "Famous for its antibacterial and detoxifying properties.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoCODicLUZW9_Cj7uTnuJpxdL71i2K8NPA1Q&s"
+            },
+            {
+                name: "Amla",
+                description: "Rich in Vitamin C, Amla is great for hair and skin health.",
+                image: "data:image/jpeg;base64,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"
+            },
+            {
+                name: "Shatavari",
+                description: "Supports hormonal balance and improves vitality.",
+                image: "https://www.apnikheti.com/upload/crops/3507idea99shatavari.jpg"
+            },
+            {
+                name: "Banana Leaves",
+                description: "Supports hormonal balance and improves vitality.",
+                image: "https://www.bigbasket.com/media/uploads/p/xxl/20003403_4-fresho-banana-leaf.jpg"
+            },
+            {
+                name: "Betel Leaves",
+                description: "Positive energy and can bring good luck, wealth, and harmony.",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAFW2eZvEBdqb6if4-TkhrKusSwu1vCP5AJA&s"
+            },
+
+            {
+                name: "Peacock Feathers",
+                description: "They are believed to bring good fortune, wealth, and protection.",
+                image: "https://www.jiomart.com/images/product/original/rv7ea83wow/uphaar-r-natural-peacock-feather-mor-pankh-real-feather-tails-for-home-decor-full-length-good-luck-art-and-craft-worship-pack-of-50-24-inch-product-images-orv7ea83wow-p607630405-0-202401311500.png?im=Resize=(420,420)"
+            }
+        ];
+
+        // Dynamically create cards
+        const container = document.getElementById("jadiButiContainer");
+
+        jadiButis.forEach(herb => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+
+            // Make the entire card clickable
+            card.innerHTML = `
+                <img src="${herb.image}" alt="${herb.name}">
+                <div class="card-content">
+                    <h3 class="card-title">${herb.name}</h3>
+                    <p class="card-description">${herb.description}</p>
+                </div>
+            `;
+
+            card.addEventListener("click", () => {
+                // Redirect to the order page with the herb name as a query parameter
+                window.location.href = `order.html?herbName=${encodeURIComponent(herb.name)}`;
+            });
+
+            container.appendChild(card);
+        });
+    </script>
+</body>
+</html>

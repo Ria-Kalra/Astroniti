@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Sacramento&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <title>Astrology Services</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f1db48b1;
+            color: #333;
+            font-size: 129%;
+            text-align: left;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #161414;
+        }
+        .profile, .services {
+            margin-bottom: 20px;
+        }
+
+        /* Profile Section */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-image {
+    width: 179px;
+    height: 179px;
+    border-radius: 10%;
+    border: 6px solid #ffd700;
+    object-fit: cover; /* Ensures the image maintains its aspect ratio and fits the dimensions */
+    overflow: hidden;  /* Prevents overflow if the image doesn't fit perfectly */
+}
+
+.profile-info {
+    flex: 1;
+}
+
+        .stats span, .skills span {
+            display: inline-block;
+            margin: 5px;
+            padding: 5px 10px;
+            background: #ffd700;
+            color: #000;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        /* Service Section */
+        .service-filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .filter-button {
+            padding: 10px 20px;
+            background: #ffd700;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .filter-button:hover {
+            background: #e6c200;
+        }
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .service-card h3 {
+            font-size: 18px;
+            margin: 0 0 10px;
+        }
+        .service-card p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .service-card .price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #222;
+        }
+        .service-card .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-right: 8px;
+        }
+        .service-card .cta {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #ffd700;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .service-card .cta:hover {
+            background: #e6c200;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="profile-header">
+                <img src="Images\me.jpg" alt="Astrologer Nitisha Malhotra" class="profile-image">
+                <div class="profile-info">
+                    <h2>Astrologer Nitisha Malhotra</h2>
+                    <p>🌟 Career and Business Astrology <br> 🌟 Behavioral & Medical Astrology</p>
+                    <div class="stats">
+                        <span>Top 1%</span>
+                        <span>1947 Bookings</span>
+                        <span>🌟 Popular</span>
+                    </div>
+                    <div class="skills">
+                        <span>Astrology</span>
+                        <span>Vedic Astrology</span>
+                        <span>Numerology</span>
+                        <span>Palmist</span>
+                        <span>Tarot Reader</span>
+                        <span>Vastu Consultant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div class="services">
+            <div class="service-filters">
+                <button class="filter-button" data-filter="all">All</button>
+                <button class="filter-button" data-filter="webinar">Webinar</button>
+                <button class="filter-button" data-filter="call">1:1 Call</button>
+                <button class="filter-button" data-filter="priority">Priority DM</button>
+                <button class="filter-button" data-filter="package">Package</button>
+                <button class="filter-button" data-filter="digital">Digital Product</button>
+            </div>
+            <div id="services-container" class="service-list">
+                <!-- Services will be dynamically populated here -->
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="footer-content">
+        <h2 style="color:rgb(240, 236, 236);"Connect With Us></h2>
+        <div class="social-icons">
+            <a class="facebook" href="https://www.facebook.com/share/knEWVGQ5KiUGajmf/?mibextid=LQQJ4d" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="instagram" href="https://www.instagram.com/astrologernitishamalhotra/profilecard/?igsh=MXhxaGRzMXN3Yzd0cw==" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a class="linkedin" href="https://www.linkedin.com/in/nitisha-malhotra-astrologer-ba7ba632b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="whatsapp" href="https://api.whatsapp.com/send?phone=+918933807108&text=Hello!Radhe Radhe! I want to know about your services!" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a class="youtube" href="https://youtube.com/@astrologernitishamalhotra222?si=J3EaIcYdMTS3FtW4" target="_blank">
+                <i class="fab fa-youtube"></i>
+
+            </a>
+            <a class="telegram" href="https://t.me/YourUsername" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+            
+            
+        </div>
+    </div> 
+    <p>&copy; All copyrights reserved 2024 <a href="https://www.astroniti.com" style=" color: yellow;" target="_blank">AstroNiti.com</a>.</p>
+
+
+   
+   
+</footer>
+
+    <script>
+        // Service Data
+        const services = [
+            {
+                type: "call",
+                title: "In-Depth Astrology Consultation ~ 50 minutes",
+                description: "Karma is the only remedy!",
+                duration: "50 mins",
+                price: "₹3,499",
+                mode: "Video Meeting"
+            },
+            {
+                type: "priority",
+                title: "One Question",
+                description: "You can ask any one question (need birth details)",
+                duration: "Priority DM",
+                price: "₹650",
+                mode: "Message"
+            },
+            {
+                type: "webinar",
+                title: "Rahu Mahadasha Webinar",
+                description: "Learn how to navigate through this period",
+                duration: "120 mins",
+                price: "₹295",
+                mode: "Webinar"
+            },
+            {
+                type: "digital",
+                title: "Basics of Astrology - Course Details",
+                description: "Learn the fundamentals of astrology in detail.",
+                duration: "Digital Product",
+                price: "₹0",
+                mode: "Download"
+            },
+            {
+                type: "package",
+                title: "Medical Astrology - Analysis and Remedies",
+                description: "Through Vedic Astrology and Ayurveda",
+                duration: "2 products",
+                price: "₹5,100",
+                mode: "Package",
+                originalPrice: "₹6,000"
+            },
+            {
+                type: "digital",
+                title: "Numerology Made Easy",
+                description: "Master the Lo-Shu Grid with detailed charts.",
+                duration: "Digital Product",
+                price: "₹219",
+                mode: "Download"
+            }
+        ];
+
+        const servicesContainer = document.getElementById("services-container");
+
+        function displayServices(filter = "all") {
+            servicesContainer.innerHTML = "";
+            const filteredServices = services.filter(service => filter === "all" || service.type === filter);
+            filteredServices.forEach(service => {
+                const card = document.createElement("div");
+                card.className = "service-card";
+
+                card.innerHTML = `
+                    <h3>${service.title}</h3>
+                    <p>${service.description}</p>
+                    <p><strong>${service.duration}</strong></p>
+                    <p class="price">
+                        ${service.originalPrice ? `<span class="original-price">${service.originalPrice}</span>` : ""}
+                        ${service.price}
+                    </p>
+                    <button class="cta">${service.mode === "Download" ? "Download Now" : "Book Now"}</button>
+                `;
+
+                servicesContainer.appendChild(card);
+            });
+        }
+
+        document.querySelectorAll(".filter-button").forEach(button => {
+            button.addEventListener("click", () => {
+                const filter = button.getAttribute("data-filter");
+                displayServices(filter);
+            });
+        });
+
+        displayServices();
+    </script>
+</body>
+</html>

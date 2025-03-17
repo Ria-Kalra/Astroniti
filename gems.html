@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yellow Sapphire (2 Carat)</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffd700;
+  padding: 10px 20px;
+}
+
+.header .logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header nav ul li {
+  margin: 0 10px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header .lang-btn {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.header .cart {
+  display: flex;
+  align-items: center;
+}
+
+.header .cart span {
+  margin-right: 5px;
+}
+
+.product {
+  display: flex;
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+  width: 200px;
+  height: auto;
+}
+
+.product-details {
+  margin-left: 20px;
+}
+
+.price {
+  margin: 20px 0;
+}
+
+.discounted-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+}
+
+.original-price {
+  text-decoration: line-through;
+  margin-left: 10px;
+  color: red;
+}
+
+.actions {
+  margin-top: 20px;
+}
+
+.actions button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-to-cart {
+  background-color: #ffa500;
+  color: white;
+}
+
+.buy-now {
+  background-color: #ff4500;
+  color: white;
+}
+
+.testimonials {
+  margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials blockquote {
+  margin: 0 0 20px;
+  padding: 10px;
+  border-left: 5px solid #ffd700;
+  background-color: #f9f9f9;
+}
+
+.testimonials footer {
+  font-style: italic;
+  text-align: right;
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">AstroNiti</div>
+    <nav>
+      <ul>
+        <li><a href="#">All Services</a></li>
+        <li><a href="#">Instant Report</a></li>
+        <li><a href="#">All Products</a></li>
+        <li><a href="#">Gemstones</a></li>
+      </ul>
+    </nav>
+    <button class="lang-btn">हिंदी</button>
+    <div class="cart">
+      <span>0</span>
+      <img src="cart-icon.png" alt="Cart">
+    </div>
+  </header>
+
+  <main>
+    <section class="product">
+      <div class="product-image">
+        <img src="yellow-sapphire.jpg" alt="Yellow Sapphire">
+      </div>
+      <div class="product-details">
+        <h1>Yellow Sapphire (2 Carat)</h1>
+        <p><strong>Purpose:</strong> To attain wealth, beauty, success in marital life, and protection from enemies.</p>
+        <p><strong>How to Wear:</strong> In a gold ring on the index finger.</p>
+        <p><strong>Symbolizes:</strong> Abundance, Prosperity, Education, Success, Children, and Divinity.</p>
+        <p><strong>AstroSage Guarantee:</strong> 100% Genuine, Lab Certified, and Authentic.</p>
+        <div class="price">
+          <span class="discounted-price">$121.52 / ₹7899</span>
+          <span class="original-price">$243.05 / ₹15798</span>
+          <span class="savings">You Save: 50%</span>
+        </div>
+        <p>(Delivery 3-7 working days)</p>
+        <div class="actions">
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="buy-now">Buy Now</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <h2>Testimonials</h2>
+      <blockquote>
+        <p>I bought Red Coral from AstroNiti and was very satisfied with the product quality. Even my astrologer approved of the product and praised its quality. Thank you, AstroNiti!</p>
+        <footer>~ Puja Sharma</footer>
+      </blockquote>
+      <blockquote>
+        <p>The Yellow Sapphire I purchased from AstroNiti was a really good one. I belong to a Brahmin family and hence have good knowledge of gemstones. My yellow sapphire is amazing!</p>
+      </blockquote>
+    </section>
+  </main>
+</body>
+<script>
+    document.querySelector('.buy-now').addEventListener('click', () => {
+  alert('Redirecting to the purchase page...');
+});
+
+</script>
+</html>

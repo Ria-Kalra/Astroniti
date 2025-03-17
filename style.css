@@ -1,0 +1,544 @@
+
+
+/* Header Top Section */
+.header-top {
+    display: flex; /* Flexbox layout for the header */
+    justify-content: space-between; /* Space between left and right items */
+    align-items: center; /* Vertically center the items */
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Contact Info Section */
+.contact-info {
+    display: flex; /* Ensure icons are in a single row */
+    align-items: center; /* Vertically center align the icons and text */
+}
+
+.contact-info a {
+    color: #fff; /* Default color for the text */
+    margin-right: 15px; /* Space between icons */
+    text-decoration: none;
+    font-size: 14px;
+    display: flex; /* Ensure the icon and text are aligned */
+    align-items: center; /* Center align the icon with text */
+}
+
+/* Light green color for phone icon */
+.contact-info a[href^="tel"] i {
+    color: #34A853; /* Light green for phone icon */
+}
+
+/* Gmail red color for email icon */
+.contact-info a[href^="mailto"] i {
+    color: #EA4335; /* Gmail red for email icon */
+}
+
+/* General styling for the icons to align them properly */
+.contact-info a i {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 18px; /* Icon size */
+}
+
+/* Social Icons and Login Section */
+.social-icons{
+    margin-left: auto; /* Push these to the right */
+}
+
+
+
+/* Social Icons aligned to the left of login/signup */
+.social-icons {
+    display: flex;
+    margin-left: 10px; /* Space between social icons and login/signup */
+}
+
+.social-icons a {
+    font-size: 18px;
+    margin-left: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Facebook icon */
+.social-icons a.facebook {
+    color: #1877F2;
+}
+
+/* Instagram icon */
+.social-icons a.instagram {
+    color: #E4405F;
+}
+
+/* LinkedIn icon */
+.social-icons a.linkedin {
+    color: #0077B5;
+}
+
+/* Hover effects for icons */
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+
+/* Banner Section */
+.banner {
+    position: relative;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/007/425/490/small_2x/woman-holding-a-astrology-book-astrological-wheel-projection-choose-a-zodiac-sign-astrology-esoteric-concept-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.banner-text {
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 10px;
+    border-radius: 10px;
+    max-width: 80%;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text h1 {
+    font-size: 58px;
+    font-weight: bold;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.btn-enquire {
+    background-color: #FBAF42;
+    color: #fff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn-enquire:hover {
+    background-color: #f7921e;
+}
+
+/* Login/Signup Form */
+.login {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #333;
+  }
+  
+  .login a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 10px 15px;
+    background-color: #444;
+    border-radius: 5px;
+  }
+  
+  .login a:hover {
+    background-color: #555;
+  }
+  
+  /* Login/Sign-Up Form Styles */
+  .login-signup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  #form-dialog {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #form-dialog input[type="text"],
+  #form-dialog input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+  
+  #form-dialog input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  #form-dialog input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  #toggle-form {
+    background: transparent;
+    border: none;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .banner-text h1 {
+        font-size: 36px;
+    }
+}
+
+/* Unhide Social Icons */
+.social-icons {
+    display: flex;
+}
+/* Footer Section */
+#footer {
+    background-color: #222; /* Dark background for the footer */
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content h2 {
+    margin-bottom: 15px; /* Space below the heading */
+}
+
+.social-icons {
+    display: flex; /* Flexbox for horizontal alignment */
+    justify-content: center; /* Center the icons */
+    gap: 20px; /* Space between icons */
+}
+
+.social-icons a {
+    font-size: 30px; /* Increase icon size */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+/* Brand colors for footer icons */
+.social-icons a.facebook {
+    color: #3b5998; /* Facebook Blue */
+}
+
+.social-icons a.instagram {
+    color: #C13584; /* Original Instagram Pink */
+}
+
+.social-icons a.linkedin {
+    color: #0077B5; /* LinkedIn Blue */
+}
+
+.social-icons a.whatsapp {
+    color: #25D366; /* WhatsApp Green */
+}
+.social-icons a.youtube {
+    color: #d01919; /* WhatsApp Green */
+}
+
+/* Change color on hover */
+.social-icons a:hover {
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+}
+/* Banner Section */
+.banner {
+    position: relative;
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/007/425/490/small_2x/woman-holding-a-astrology-book-astrological-wheel-projection-choose-a-zodiac-sign-astrology-esoteric-concept-photo.jpg'); /* Replace this with your actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center; /* Center the content vertically */
+}
+
+/* Logo Container */
+.logo-container {
+    position: absolute; /* Position the logo container absolutely */
+    left: 20px; /* Space from the left */
+    top: 20px; /* Space from the top */
+    display: flex; /* Align items in a row */
+    align-items: center; /* Center vertically */
+}
+
+/* Circular Astrology Icon */
+.astrology-icon {
+    width: 60px; /* Width of the circular icon */
+    height: 60px; /* Height of the circular icon */
+    border-radius: 50%; /* Makes the image circular */
+    margin-right: 10px; /* Space between icon and title */
+    border: 3px solid #fff; /* Optional: border around the icon */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+.website-title {
+    font-size: 48px; /* Increased size for better visibility */
+    color: #ee9314; /* Brand color for the title */
+    font-weight: bold; /* Make the title bold */
+    font-family: 'Sacramento', cursive; /* Use a cursive font for elegance */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
+    margin: 0; /* Remove default margin */
+}
+
+/* Optional: Add hover effect */
+.logo-container:hover .website-title {
+    color: #edaf69; /* Change color on hover */
+}
+
+
+/* About Us section */
+/* Center the heading */
+.about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px;
+}
+
+.about-us-image {
+    flex: 1;
+    max-width: 30%; /* Adjust this value to control the image width */
+    margin-right: 10px; /* Reduced margin to lessen space between image and text */
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-us-text {
+    flex: 2;
+    max-width: 65%;
+    text-align: center; /* Align text to the center */
+}
+.text{
+    font-size: 30px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    color: #c06409;
+}
+.bolde{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-image, .about-us-text {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .about-us-image {
+        margin-bottom: 20px;
+    }
+
+    .about-us-text {
+        text-align: center; /* Ensure text stays centered on smaller screens */
+    }
+}
+
+/* Astrological Remedies Section */
+/* Remedies Section Styling */
+#remedies {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.remedies-title {
+    font-family:Georgia;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.remedies-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.remedies-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.remedies-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    width: 48%; /* Adjusted to fit two cards per row */
+    text-align: center; /* Ensure all text is centered */
+}
+
+.remedies-card img {
+    width: 40%;
+    height: auto;
+}
+
+.remedies-card-content {
+    padding: 15px;
+}
+
+.remedies-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center; /* Center the title */
+}
+
+.remedies-card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center; /* Center the paragraph */
+}
+
+.btn-remedy {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center the button */
+    margin: 0 auto; /* Ensure the button is centered */
+}
+
+.btn-remedy:hover {
+    background-color: #e63946;
+}
+
+/* Ensure cards stack properly on smaller screens */
+@media (max-width: 768px) {
+    .remedies-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+.footer-bar {
+    background-color: #2E3A68; /* Dark blue background */
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-bar .footer-language {
+    margin-bottom: 5px;
+}
+
+.footer-bar .footer-language span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.footer-bar .footer-language a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-bar .footer-language a:hover {
+    text-decoration: underline;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+h2 a {
+    text-decoration: none;
+    color: #010a13; /* Link color */
+    font-weight: bold;
+    font-family: Georgia;
+    font-size:30px ;
+}
+h2 a:hover {
+    color: #0056b3; /* Hover color */
+}
+.description {
+    margin-top: 10px;
+    font-size: 16px;
+}
+.media-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.service-box {
+    width: 200px; /* Increase width to make the box wider */
+    height: 200px; /* Increase height to make the box larger */
+    margin: 20px; /* Keep some spacing between boxes */
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #ffebcc; /* Light orange background on hover */
+}
+
+.service-box img {
+    width: 200px; /* Increase the image size */
+    height: 200px; /* Keep image dimensions larger to fit the box */
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.service-box h3 {
+    font-size: 16px; /* Adjust font size for the larger box */
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+}
